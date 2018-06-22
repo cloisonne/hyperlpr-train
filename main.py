@@ -86,7 +86,7 @@ class TextImageGenerator:
 
     def init(self):
         self.labels = []
-        with open(self._label_file) as f:
+        with open(self._label_file，encoding='utf-8') as f:
             for line in f:
                 filename, label = parseLine(line)
                 self.filenames.append(filename)
